@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace SLTest
 {
@@ -11,8 +12,13 @@ namespace SLTest
         static void Main(string[] args)
         {
             int para = 1;
-            para++;
-            Console.WriteLine(para);
+            while (true)
+            {
+                para++;
+                Console.WriteLine(para);
+                Thread.Sleep(500);
+            }
+
         }
     }
 }
